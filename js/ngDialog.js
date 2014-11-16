@@ -192,10 +192,10 @@
 								template += '<div class="ngdialog-close"></div>';
 							}
 
-							self.$result = $dialog = $el('<div id="ngdialog' + globalID + '" class="ngdialog"></div>');
+							self.$result = $dialog = $el('<div id="ngdialog' + globalID + '" class="ngdialog ngdialog-overlay"></div>');
 							$dialog.html((options.overlay ?
-								'<div class="ngdialog-overlay"></div><div class="ngdialog-content">' + template + '</div>' :
-								'<div class="ngdialog-content">' + template + '</div>'));
+              					'<div></div><div class="ngdialog-content">' + template + '</div>' :
+              					'<div class="ngdialog-content">' + template + '</div>'));
 
 							if (options.data && angular.isString(options.data)) {
 								var firstLetter = options.data.replace(/^\s*/, '')[0];
